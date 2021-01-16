@@ -1,7 +1,7 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/oiwb57pb88ya/public_html/social/social
+    - export DEPLOYPATH=/home/admin/public_html/social/social
     - /bin/cp -R html/ $DEPLOYPATH
     - /bin/cp -R vendor/ $DEPLOYPATH
     - /bin/cp composer.json $DEPLOYPATH
