@@ -1,0 +1,50 @@
+[16-Jan-2021 18:22:51 America/New_York] Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away: SELECT 1 AS expression
+FROM
+{key_value} key_value
+WHERE (name = :db_condition_placeholder_0) AND (collection = :db_condition_placeholder_1); Array
+(
+    [:db_condition_placeholder_0] => system.cron_last
+    [:db_condition_placeholder_1] => state
+)
+ in C:\wamp64\www\social\social\html\core\lib\Drupal\Core\State\State.php on line 84 #0 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Connection.php(665): Drupal\Core\Database\Connection->handleQueryException(Object(PDOException), 'SELECT 1 AS exp...', Array, Array)
+#1 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Driver\mysql\Connection.php(357): Drupal\Core\Database\Connection->query('SELECT 1 AS exp...', Array, Array)
+#2 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Query\Select.php(510): Drupal\Core\Database\Driver\mysql\Connection->query('SELECT 1 AS exp...', Array, Array)
+#3 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Query\Merge.php(367): Drupal\Core\Database\Query\Select->execute()
+#4 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\KeyValueStore\DatabaseStorage.php(116): Drupal\Core\Database\Query\Merge->execute()
+#5 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\State\State.php(84): Drupal\Core\KeyValueStore\DatabaseStorage->set('system.cron_las...', 1610839182)
+#6 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Cron.php(159): Drupal\Core\State\State->set('system.cron_las...', 1610839182)
+#7 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Cron.php(135): Drupal\Core\Cron->setCronLastTime()
+#8 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\ProxyClass\Cron.php(75): Drupal\Core\Cron->run()
+#9 C:\wamp64\www\social\social\html\core\modules\automated_cron\src\EventSubscriber\AutomatedCron.php(65): Drupal\Core\ProxyClass\Cron->run()
+#10 [internal function]: Drupal\automated_cron\EventSubscriber\AutomatedCron->onTerminate(Object(Symfony\Component\HttpKernel\Event\PostResponseEvent), 'kernel.terminat...', Object(Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#11 C:\wamp64\www\social\social\html\core\lib\Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher.php(111): call_user_func(Array, Object(Symfony\Component\HttpKernel\Event\PostResponseEvent), 'kernel.terminat...', Object(Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher))
+#12 C:\wamp64\www\social\social\vendor\symfony\http-kernel\HttpKernel.php(88): Drupal\Component\EventDispatcher\ContainerAwareEventDispatcher->dispatch('kernel.terminat...', Object(Symfony\Component\HttpKernel\Event\PostResponseEvent))
+#13 C:\wamp64\www\social\social\vendor\stack\builder\src\Stack\StackedHttpKernel.php(32): Symfony\Component\HttpKernel\HttpKernel->terminate(Object(Symfony\Component\HttpFoundation\Request), Object(Drupal\Core\Render\HtmlResponse))
+#14 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\DrupalKernel.php(686): Stack\StackedHttpKernel->terminate(Object(Symfony\Component\HttpFoundation\Request), Object(Drupal\Core\Render\HtmlResponse))
+#15 C:\wamp64\www\social\social\html\index.php(22): Drupal\Core\DrupalKernel->terminate(Object(Symfony\Component\HttpFoundation\Request), Object(Drupal\Core\Render\HtmlResponse))
+#16 {main}
+[16-Jan-2021 18:22:51 America/New_York] PDOException: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away in C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Statement.php:59
+Stack trace:
+#0 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Statement.php(59): PDOStatement->execute(Array)
+#1 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Connection.php(640): Drupal\Core\Database\Statement->execute(Array, Array)
+#2 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Driver\mysql\Connection.php(357): Drupal\Core\Database\Connection->query('DELETE FROM {se...', Array, Array)
+#3 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Query\Delete.php(55): Drupal\Core\Database\Driver\mysql\Connection->query('DELETE FROM {se...', Array, Array)
+#4 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Lock\DatabaseLockBackend.php(170): Drupal\Core\Database\Query\Delete->execute()
+#5 C:\wamp64\www\social\social\html\core\includes\bootstrap.inc(1074): Drupal\Core\Lock\DatabaseLockBackend->releaseAll()
+#6 [internal function]: _drupal_shutdown_function()
+#7 {main}
+
+Next Drupal\Core\Database\DatabaseExceptionWrapper: SQLSTATE[HY000]: General error: 2006 MySQL server has gone away: DELETE FROM {semaphore} 
+WHERE value = :db_condition_placeholder_0; Array
+(
+    [:db_condition_placeholder_0] => 1540235393600374aaefbe10.76591020
+)
+ in C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Connection.php:701
+Stack trace:
+#0 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Connection.php(665): Drupal\Core\Database\Connection->handleQueryException(Object(PDOException), 'DELETE FROM {se...', Array, Array)
+#1 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Driver\mysql\Connection.php(357): Drupal\Core\Database\Connection->query('DELETE FROM {se...', Array, Array)
+#2 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Database\Query\Delete.php(55): Drupal\Core\Database\Driver\mysql\Connection->query('DELETE FROM {se...', Array, Array)
+#3 C:\wamp64\www\social\social\html\core\lib\Drupal\Core\Lock\DatabaseLockBackend.php(170): Drupal\Core\Database\Query\Delete->execute()
+#4 C:\wamp64\www\social\social\html\core\includes\bootstrap.inc(1074): Drupal\Core\Lock\DatabaseLockBackend->releaseAll()
+#5 [internal function]: _drupal_shutdown_function()
+#6 {main}
