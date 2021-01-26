@@ -150,7 +150,7 @@
             "version": "v3.4.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/twbs/bootstrap.git",
+                "url": "git@github.com:twbs/bootstrap.git",
                 "reference": "68b0d231a13201eb14acd3dc84e51543d16e5f7e"
             },
             "dist": {
@@ -207,12 +207,12 @@
             "version": "9.15.10",
             "source": {
                 "type": "git",
-                "url": "git@github.com:isagalaev/highlight.js.git",
+                "url": "https://github.com/highlightjs/highlight.js.git",
                 "reference": "3026925b1c57c9a9feb0713e663f8d1ef8ff08e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/isagalaev/highlight.js/zipball/3026925b1c57c9a9feb0713e663f8d1ef8ff08e9",
+                "url": "https://api.github.com/repos/highlightjs/highlight.js/zipball/3026925b1c57c9a9feb0713e663f8d1ef8ff08e9",
                 "reference": "3026925b1c57c9a9feb0713e663f8d1ef8ff08e9"
             },
             "type": "bower-asset"
@@ -222,7 +222,7 @@
             "version": "3.5.1",
             "source": {
                 "type": "git",
-                "url": "https://github.com/jquery/jquery-dist.git",
+                "url": "git@github.com:jquery/jquery-dist.git",
                 "reference": "4c0e4becb8263bb5b3e6dadc448d8e7305ef8215"
             },
             "dist": {
@@ -5589,16 +5589,16 @@
         },
         {
             "name": "goalgorilla/open_social",
-            "version": "9.6.0",
+            "version": "9.7.0",
             "source": {
                 "type": "git",
                 "url": "https://github.com/goalgorilla/open_social.git",
-                "reference": "ac0bde1a7523bfa20f1259e346e298b257bc51e2"
+                "reference": "58d3c77359a305c1bcdc9d851434cd2e0668c765"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/goalgorilla/open_social/zipball/ac0bde1a7523bfa20f1259e346e298b257bc51e2",
-                "reference": "ac0bde1a7523bfa20f1259e346e298b257bc51e2",
+                "url": "https://api.github.com/repos/goalgorilla/open_social/zipball/58d3c77359a305c1bcdc9d851434cd2e0668c765",
+                "reference": "58d3c77359a305c1bcdc9d851434cd2e0668c765",
                 "shasum": ""
             },
             "require": {
@@ -5789,7 +5789,7 @@
                 "GPL-2.0-or-later"
             ],
             "description": "Open Social is a distribution for building social communities and intranets.",
-            "time": "2021-01-12T10:11:41+00:00"
+            "time": "2021-01-26T15:01:10+00:00"
         },
         {
             "name": "google/apiclient",
@@ -7097,33 +7097,29 @@
         },
         {
             "name": "paragonie/random_compat",
-            "version": "v2.0.19",
+            "version": "v9.99.100",
             "source": {
                 "type": "git",
                 "url": "https://github.com/paragonie/random_compat.git",
-                "reference": "446fc9faa5c2a9ddf65eb7121c0af7e857295241"
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/446fc9faa5c2a9ddf65eb7121c0af7e857295241",
-                "reference": "446fc9faa5c2a9ddf65eb7121c0af7e857295241",
+                "url": "https://api.github.com/repos/paragonie/random_compat/zipball/996434e5492cb4c3edcb9168db6fbb1359ef965a",
+                "reference": "996434e5492cb4c3edcb9168db6fbb1359ef965a",
                 "shasum": ""
             },
             "require": {
-                "php": ">=5.2.0"
+                "php": ">= 7"
             },
             "require-dev": {
-                "phpunit/phpunit": "4.*|5.*"
+                "phpunit/phpunit": "4.*|5.*",
+                "vimeo/psalm": "^1"
             },
             "suggest": {
                 "ext-libsodium": "Provides a modern crypto API that can be used to generate random bytes."
             },
             "type": "library",
-            "autoload": {
-                "files": [
-                    "lib/random.php"
-                ]
-            },
             "notification-url": "https://packagist.org/downloads/",
             "license": [
                 "MIT"
@@ -7142,7 +7138,7 @@
                 "pseudorandom",
                 "random"
             ],
-            "time": "2020-10-15T10:06:57+00:00"
+            "time": "2020-10-15T08:29:30+00:00"
         },
         {
             "name": "pear/archive_tar",
@@ -7755,21 +7751,21 @@
         },
         {
             "name": "phpseclib/phpseclib",
-            "version": "3.0.3",
+            "version": "3.0.4",
             "source": {
                 "type": "git",
                 "url": "https://github.com/phpseclib/phpseclib.git",
-                "reference": "97a5a270e4a9ebfc1a7e2f462e917cbce1a8e6d9"
+                "reference": "845a2275e886ba9fb386c8f59cb383dd9c8963e9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/97a5a270e4a9ebfc1a7e2f462e917cbce1a8e6d9",
-                "reference": "97a5a270e4a9ebfc1a7e2f462e917cbce1a8e6d9",
+                "url": "https://api.github.com/repos/phpseclib/phpseclib/zipball/845a2275e886ba9fb386c8f59cb383dd9c8963e9",
+                "reference": "845a2275e886ba9fb386c8f59cb383dd9c8963e9",
                 "shasum": ""
             },
             "require": {
                 "paragonie/constant_time_encoding": "^1|^2",
-                "paragonie/random_compat": "^1.4|^2.0",
+                "paragonie/random_compat": "^1.4|^2.0|^9.99.99",
                 "php": ">=5.6.1"
             },
             "require-dev": {
@@ -7858,7 +7854,7 @@
                     "type": "tidelift"
                 }
             ],
-            "time": "2021-01-16T17:35:19+00:00"
+            "time": "2021-01-25T19:02:05+00:00"
         },
         {
             "name": "psr/cache",
